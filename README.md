@@ -1,19 +1,20 @@
-# generator-restqa-plugin [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
-> About A Yeoman generator for a RestQA Plugin
+# Generator-plugin [![NPM version][npm-image]][npm-url]
+
+> About A Yeoman generator to manage RestQA Plugin
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-restqa-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and @restqa/generator-plugin using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-restqa-plugin
+npm install -g @restqa/generator-plugin
 ```
 
 Then generate your new project:
 
 ```bash
-yo restqa-plugin
+yo @restqa/plugin
 ```
 
 ## Getting To Know Yeoman
@@ -25,12 +26,8 @@ yo restqa-plugin
 
 ## License
 
-Apache-2.0 © [Olivier Rodomond]()
+Apache-2.0
 
 
-[npm-image]: https://badge.fury.io/js/generator-restqa-plugin.svg
-[npm-url]: https://npmjs.org/package/generator-restqa-plugin
-[travis-image]: https://travis-ci.com/restqa/generator-restqa-plugin.svg?branch=master
-[travis-url]: https://travis-ci.com/restqa/generator-restqa-plugin
-[daviddm-image]: https://david-dm.org/restqa/generator-restqa-plugin.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/restqa/generator-restqa-plugin
+[npm-image]: https://badge.fury.io/js/restqa/generator-plugin.svg
+[npm-url]: https://npmjs.org/package/restqa/generator-plugin

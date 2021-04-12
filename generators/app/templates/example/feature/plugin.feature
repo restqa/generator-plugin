@@ -1,4 +1,4 @@
-Feature: <%= pluginName %> Example
+Feature: <%= pkgName %> Example
 
 Scenario: Calculate an addition
 Given I have my calculator

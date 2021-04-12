@@ -5,7 +5,7 @@ const {
   setWorldConstructor
 } = require('cucumber')
 
-const <%= pluginName %> = require('../src/<%= pluginName %>')
+const <%= pkgCapitalizedNameNoSpace %> = require('../src/<%= pkgSlugName %>')
 
 const config = {
   name: 'local',
@@ -16,7 +16,7 @@ const config = {
   title: 'my example title'
 }
 
-const instance = new <%= pluginName %>(config)
+const instance = new <%= pkgCapitalizedNameNoSpace %>(config)
 
 instance.setParameterType(defineParameterType)
 instance.setSteps({ Given, When, Then })

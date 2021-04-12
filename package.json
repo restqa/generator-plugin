@@ -1,12 +1,11 @@
 {
-  "name": "generator-restqa-plugin",
-  "version": "0.0.0",
+  "name": "@restqa/generator-plugin",
+  "version": "0.0.1",
   "description": "About A Yeoman generator for a RestQA Plugin",
-  "homepage": "https://github.com/restqa/generator-restqa-plugin",
+  "homepage": "https://github.com/restqa/generator-plugin",
   "author": {
     "name": "Olivier Rodomond",
-    "email": "olivier@restqa.io",
-    "url": ""
+    "email": "olivier@restqa.io"
   },
   "scripts": {
     "test": "jest",
@@ -48,8 +47,9 @@
     "npm": ">= 4.0.0"
   },
   "dependencies": {
-    "yeoman-generator": "^3.1.1",
     "chalk": "^2.1.0",
+    "underscore.string": "^3.3.5",
+    "yeoman-generator": "^3.1.1",
     "yosay": "^2.0.2"
   },
   "jest": {
@@ -81,6 +81,6 @@
       "fix": true
     }
   },
-  "repository": "git@github.com:restqa/generator-restqa-plugin.git",
+  "repository": "git@github.com:restqa/generator-plugin.git",
   "license": "Apache-2.0"
 }
