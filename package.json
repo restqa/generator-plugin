@@ -1,0 +1,86 @@
+{
+  "name": "@restqa/generator-plugin",
+  "version": "0.0.1",
+  "description": "About A Yeoman generator for a RestQA Plugin",
+  "homepage": "https://github.com/restqa/generator-plugin",
+  "author": {
+    "name": "Olivier Rodomond",
+    "email": "olivier@restqa.io"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch --coverage",
+    "test:coverage": "jest --coverage",
+    "lint:fix": "eslint --fix generators",
+    "lint": "eslint generators"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "test automation",
+    "restqa",
+    "testing",
+    "cucumber",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "@restqa/restqa-plugin-bootstrap": "0.0.5",
+    "eslint": "^7.21.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.2.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "jest": "^26.6.3",
+    "jest-runner-eslint": "^0.10.0",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^1.7.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    }
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "underscore.string": "^3.3.5",
+    "yeoman-generator": "^3.1.1",
+    "yosay": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "watchPlugins": [
+      "jest-runner-eslint/watch-fix"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "projects": [
+      {
+        "displayName": "test"
+      },
+      {
+        "runner": "jest-runner-eslint",
+        "displayName": "lint",
+        "testMatch": [
+          "<rootDir>/generators/**/*.js",
+          "<rootDir>/generators/**/**/*.js",
+          "<rootDir>/generators/**/**/**/*.js",
+          "<rootDir>/__tests__/*.js"
+        ]
+      }
+    ]
+  },
+  "jest-runner-eslint": {
+    "cliOptions": {
+      "fix": true
+    }
+  },
+  "repository": "git@github.com:restqa/generator-plugin.git",
+  "license": "Apache-2.0"
+}

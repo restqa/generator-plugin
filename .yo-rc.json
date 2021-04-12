@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Olivier Rodomond",
+      "authorEmail": "olivier@restqa.io",
+      "authorUrl": ""
+    }
+  }
+}
