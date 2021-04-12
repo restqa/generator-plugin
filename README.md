@@ -29,5 +29,5 @@ yo @restqa/plugin
 Apache-2.0
 
 
-[npm-image]: https://badge.fury.io/js/restqa/generator-plugin.svg
-[npm-url]: https://npmjs.org/package/restqa/generator-plugin
+[npm-image]: https://badge.fury.io/js/@restqa/generator-plugin.svg
+[npm-url]: https://npmjs.org/package/@restqa/generator-plugin
