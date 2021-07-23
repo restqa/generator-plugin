@@ -51,6 +51,7 @@ module.exports = class extends Generator {
 
   writing () {
     [
+      '.github/workflows/build.yml',
       'src/plugin/index.js',
       'src/plugin/hooks.js',
       'src/plugin/world.js',
