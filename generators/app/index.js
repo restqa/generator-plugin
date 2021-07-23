@@ -90,6 +90,11 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore')
     )
 
+    this.fs.copy(
+      this.templatePath('_eslint.yml'),
+      this.destinationPath('.eslint.yml')
+    )
+
     const pkgJson = {
       name: this.props.pkgSlugName,
       main: `src/${this.props.pkgSlugName}/index.js`,

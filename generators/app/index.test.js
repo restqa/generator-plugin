@@ -31,7 +31,8 @@ describe('generator-restqa-plugin:app', () => {
           'example/setup.js',
           'docs/support/header.hbs',
           'docs/support/scope.hbs',
-          '.gitignore'
+          '.gitignore',
+          '.eslint.yml'
         ])
 
         const pkgPackageJson = require(path.resolve(dir, 'package.json'))
@@ -73,7 +74,8 @@ describe('generator-restqa-plugin:app', () => {
           'example/setup.js',
           'docs/support/header.hbs',
           'docs/support/scope.hbs',
-          '.gitignore'
+          '.gitignore',
+          '.eslint.yml'
         ])
 
         const pkgPackageJson = require(path.resolve(dir, 'package.json'))
@@ -115,7 +117,8 @@ describe('generator-restqa-plugin:app', () => {
           'example/setup.js',
           'docs/support/header.hbs',
           'docs/support/scope.hbs',
-          '.gitignore'
+          '.gitignore',
+          '.eslint.yml'
         ])
 
         const pkgPackageJson = require(path.resolve(dir, 'package.json'))
