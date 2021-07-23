@@ -42,7 +42,7 @@ module.exports = class extends Generator {
       this.props = props
       this.props.pkgSlugName = s.slugify(this.props.pkgName)
       this.props.pkgCapitalizedName = s.capitalize(this.props.pkgName)
-      this.props.pkgCapitalizedNameNoSpace = this.props.pkgCapitalizedName.replace(/ /g, '')
+      this.props.pkgCapitalizedNameNoSpace = s.camelize(this.props.pkgName)
       if (!this.props.confirm) {
         return process.exit(0)
       }
