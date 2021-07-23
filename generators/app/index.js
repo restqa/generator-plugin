@@ -112,11 +112,11 @@ module.exports = class extends Generator {
         eslint: '^7.20.0',
         jest: '^26.6.3',
         'jest-runner-eslint': '^0.10.0',
-        'jsdoc-to-markdown': '^6.0.1'
+        'jsdoc-to-markdown': '^6.0.1',
+        '@cucumber/cucumber': '^7.3.0'
       },
       dependencies: {
-        '@restqa/restqa-plugin-bootstrap': '0.0.4',
-        cucumber: '^6.0.5'
+        '@restqa/restqa-plugin-bootstrap': '0.0.5'
       },
       eslintConfig: {
         parserOptions: {

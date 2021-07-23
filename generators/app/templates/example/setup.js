@@ -3,7 +3,7 @@ const {
   Given, When, Then,
   defineParameterType,
   setWorldConstructor
-} = require('cucumber')
+} = require('@cucumber/cucumber')
 
 const <%= pkgCapitalizedNameNoSpace %> = require('../src/<%= pkgSlugName %>')
 

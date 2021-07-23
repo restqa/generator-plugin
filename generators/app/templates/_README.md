@@ -15,20 +15,20 @@ Coming Soon!
 ### Requirements
 
  * Node.js >= 12
- * Cucumber >= 6.0.5
+ * Cucumber >= 7.0.0
 
 ### Installation
 
 Using npm:
 
 ```
-npm install <%= pkgSlugName %> cucumber
+npm install <%= pkgSlugName %> @cucumber/cucumber
 ```
 
 Using yarn:
 
 ```
-yarn add <%= pkgSlugName %> cucumber
+yarn add <%= pkgSlugName %> @cucumber/cucumber
 ```
 
 Then you will need to create or update your world.js file:
@@ -41,7 +41,7 @@ const {
   Given, When, Then,
   defineParameterType,
   setWorldConstructor
-} = require('cucumber')
+} = require('@cucumber/cucumber')
 
 const <%= pkgCapitalizedNameNoSpace %> = require('<%= pkgSlugName %>')
 
