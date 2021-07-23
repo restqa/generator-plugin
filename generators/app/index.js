@@ -110,7 +110,7 @@ module.exports = class extends Generator {
       scripts: {
         pretest: 'npm run doc',
         doc: `jsdoc2md  --partial docs/support/scope.hbs --partial docs/support/header.hbs --files src/${this.props.pkgSlugName}/steps/**/index.js > docs/steps-catalog.md`,
-        example: 'cucumber-js --require ./example/setup.js ./example/',
+        example: 'cucumber-js --require ./example/setup.js ./example/ --publish-quiet',
         test: 'jest',
         'test:watch': 'jest --watch --coverage'
       },
