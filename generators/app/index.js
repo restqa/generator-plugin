@@ -42,7 +42,7 @@ module.exports = class extends Generator {
       this.props = props
       this.props.pkgSlugName = s.slugify(this.props.pkgName)
       this.props.pkgCapitalizedName = s.capitalize(this.props.pkgName)
-      this.props.pkgCapitalizedNameNoSpace = this.props.pkgCapitalizedName.replace(/ /g, '')
+      this.props.pkgCapitalizedNameNoSpace = s.camelize(this.props.pkgName)
       if (!this.props.confirm) {
         return process.exit(0)
       }
@@ -51,6 +51,7 @@ module.exports = class extends Generator {
 
   writing () {
     [
+      '.github/workflows/build.yml',
       'src/plugin/index.js',
       'src/plugin/hooks.js',
       'src/plugin/world.js',
@@ -90,6 +91,11 @@ module.exports = class extends Generator {
       this.destinationPath('.gitignore')
     )
 
+    this.fs.copy(
+      this.templatePath('_eslint.yml'),
+      this.destinationPath('.eslint.yml')
+    )
+
     const pkgJson = {
       name: this.props.pkgSlugName,
       main: `src/${this.props.pkgSlugName}/index.js`,
@@ -104,7 +110,7 @@ module.exports = class extends Generator {
       scripts: {
         pretest: 'npm run doc',
         doc: `jsdoc2md  --partial docs/support/scope.hbs --partial docs/support/header.hbs --files src/${this.props.pkgSlugName}/steps/**/index.js > docs/steps-catalog.md`,
-        example: 'cucumber-js --require ./example/setup.js ./example/',
+        example: 'cucumber-js --require ./example/setup.js ./example/ --publish-quiet',
         test: 'jest',
         'test:watch': 'jest --watch --coverage'
       },
@@ -112,11 +118,11 @@ module.exports = class extends Generator {
         eslint: '^7.20.0',
         jest: '^26.6.3',
         'jest-runner-eslint': '^0.10.0',
-        'jsdoc-to-markdown': '^6.0.1'
+        'jsdoc-to-markdown': '^6.0.1',
+        '@cucumber/cucumber': '^7.3.0'
       },
       dependencies: {
-        '@restqa/restqa-plugin-bootstrap': '0.0.4',
-        cucumber: '^6.0.5'
+        '@restqa/restqa-plugin-bootstrap': '0.0.5'
       },
       eslintConfig: {
         parserOptions: {
