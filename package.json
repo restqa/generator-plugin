@@ -1,6 +1,6 @@
 {
   "name": "@restqa/generator-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "About A Yeoman generator for a RestQA Plugin",
   "homepage": "https://github.com/restqa/generator-plugin",
   "author": {
