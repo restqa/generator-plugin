@@ -1,6 +1,6 @@
 {
   "name": "@restqa/generator-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "About A Yeoman generator for a RestQA Plugin",
   "homepage": "https://github.com/restqa/generator-plugin",
   "author": {
@@ -26,7 +26,6 @@
     "yeoman-generator"
   ],
   "devDependencies": {
-    "@restqa/restqa-plugin-bootstrap": "0.0.5",
     "eslint": "^7.21.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
@@ -62,7 +61,10 @@
     ],
     "projects": [
       {
-        "displayName": "test"
+        "displayName": "test",
+        "setupFilesAfterEnv": [
+          "<rootDir>/jest.setup.js"
+        ]
       },
       {
         "runner": "jest-runner-eslint",
