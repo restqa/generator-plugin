@@ -122,7 +122,7 @@ module.exports = class extends Generator {
         '@cucumber/cucumber': '^7.3.0'
       },
       dependencies: {
-        '@restqa/restqa-plugin-bootstrap': '0.0.5'
+        '@restqa/restqa-plugin-bootstrap': '0.1.0'
       },
       eslintConfig: {
         parserOptions: {
